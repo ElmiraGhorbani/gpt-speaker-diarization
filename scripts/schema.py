@@ -1,9 +1,8 @@
 from pydantic  import BaseModel
 
 class Request(BaseModel):
-    prompt : str = """Identify and extract dialogue involving a therapist and multiple children/teens from the provided text. Present the conversation in the following format:
-
-        Therapist:
-        Child 1:
-        Child 2:
-        ...."""
+    prompt : str = """Perform speaker diarization on the given text to identify and extract conversations involving multiple speakers. Present the dialogue in the following structured format:
+    Speaker 1:
+    Speaker 2:
+    Speaker 3:
+    ..."""
