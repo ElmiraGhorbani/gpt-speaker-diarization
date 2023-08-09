@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  client_diarization:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: client_diarization:v0.5.0
+    hostname: client_diarization
+    container_name: client_diarization
+    restart: always
+    environment:
+      - OPENAI_API_KEY=sk-
+    # ports:
+    #     - 8012:8000
