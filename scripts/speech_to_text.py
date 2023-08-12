@@ -55,7 +55,6 @@ class Whisper:
             wav_segments.append(segment)
         return wav_segments
 
-
     @retry_on_openai_errors(max_retry=7)
     def transcribe(self, audio_file):
         # Save audio bytes as a temporary WAV file
@@ -82,4 +81,3 @@ if __name__ == "__main__":
     print(type(audio_content))
     segments = wh.audio_process(
         "./audios/0_edited.wav")
-
