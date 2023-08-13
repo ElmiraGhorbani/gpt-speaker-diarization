@@ -1,5 +1,5 @@
-
 import functools
+import time
 
 import openai.error
 
@@ -21,6 +21,7 @@ def retry_on_openai_errors(max_retry):
                         openai.error.APIConnectionError, openai.error.ServiceUnavailableError,
                         openai.error.InvalidRequestError) as error:
                     retry += 1
+                    time.sleep(0.006)
                     print(f"Retrying {retry} time due to error: {error}")
             raise Exception(f"Reached maximum number of retries ({max_retry})")
         return wrapper
