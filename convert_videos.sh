@@ -12,9 +12,9 @@ for video_path in "${video_dir}"*; do
         video_name_no_extension="${video_name%.*}"
         
         # Run ffmpeg command to convert the video to audio
-        ffmpeg -i "${video_path}" -ar 16000 -ac 1 "./resourcesaudios/${video_name_no_extension}.wav"
+        ffmpeg -i "${video_path}" -ar 16000 -ac 1 "./resourcesaudios/${video_name_no_extension}.mp3"
         
-        echo "Converted ${video_name} to ${video_name_no_extension}.wav"
+        echo "Converted ${video_name} to ${video_name_no_extension}.mp3"
     fi
 done
 
