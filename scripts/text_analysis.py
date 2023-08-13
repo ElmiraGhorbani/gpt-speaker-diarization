@@ -40,7 +40,7 @@ class AI:
     @retry_on_openai_errors(max_retry=7)
     def extract_dialogue(self, transcript, history=[]):
         """
-        Extract dialogue involving a therapist and multiple children/teens from text.
+        Extract dialogue involving multiple speaker from text.
 
         Parameters:
             transcript (str): The text containing the conversation.
@@ -67,7 +67,7 @@ class AI:
                                 "content": transcript.replace('\n', '')}
                 messages.append(user_message)
                 tokens_per_message = 4
-                max_token = 4096 - (self.token_counter(prompt) + self.token_counter(
+                max_token = 8191 - (self.token_counter(prompt) + self.token_counter(
                     transcript) + (len(messages)*tokens_per_message) + 3)
                 response = openai.ChatCompletion.create(
                     model=self.openai_model,
