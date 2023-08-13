@@ -1,4 +1,4 @@
-# GPT-Diarization
+# GPT- Speaker Diarization
 
 This project revolves around leveraging advanced AI language models to perform speaker diarization on conversation transcripts. Speaker diarization involves segmenting spoken content into distinct portions belonging to different speakers. This approach simplifies the analysis of conversations by providing clear, structured outputs that highlight the interactions among various speakers.
 
