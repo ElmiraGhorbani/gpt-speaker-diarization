@@ -53,6 +53,12 @@ docker-compose up -d
 or
 
 ```
+
+docker pull elmira96/gpt-speaker-diarization:v0.1.0
+
+```
+
+```
 docker run -d \
     --name client_diarization \
     -e OPENAI_API_KEY=sk-*** \
