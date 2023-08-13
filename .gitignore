@@ -134,6 +134,7 @@ dmypy.json
 # static files
 *.txt
 *.wav
+*.mp3
 *.mvk
 *.webm
 *.mp4
