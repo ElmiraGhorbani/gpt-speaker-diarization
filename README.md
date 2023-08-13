@@ -40,7 +40,7 @@ pip install --force-reinstall https://github.com/yt-dlp/yt-dlp/archive/master.ta
 
 ***or just run first cell in ./notebook/How_To_Use_LLMs_For_Diarization.ipynb***
 
-
+### Run with Docker
 
 NOTE: set your OpenAI API key.  (source in docker-compose).
 
