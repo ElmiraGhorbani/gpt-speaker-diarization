@@ -4,33 +4,30 @@ USER root:root
 
 ENV PYTHONUNBUFFERED TRUE
 
-RUN apt-get update && apt-get upgrade --yes
+RUN apt-get update --fix-missing && apt-get upgrade --yes
 
 RUN apt install -y wget \
-    git \
     g++ \
     libsndfile1-dev \
-    default-jre \
     libsndfile1 \
     libsndfile1-dev \
     gcc \
-    python-dev \
-    pkg-config \
-    libavformat-dev \
-    libavcodec-dev \
-    libavdevice-dev \
-    libavutil-dev \
-    libswscale-dev \
-    libswresample-dev \
-    libavfilter-dev \
+    git \
     vim \
     curl \
-    build-essential \
+    libsm6 \
+    libxext6 \
+    libfontconfig1 \
+    libxrender1 \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    libgtk2.0-dev \
     ffmpeg
 
 
 
 COPY scripts scripts
+COPY resources resources
 
 COPY app.sh .
 RUN chmod 777 app.sh
