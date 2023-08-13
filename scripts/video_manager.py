@@ -44,11 +44,11 @@ class VideoDownloader:
 
                 # Run ffmpeg command to convert the video to audio
                 audio_output_path = os.path.join(
-                    self.audio_output_path, f"{video_name_no_extension}.wav")
+                    self.audio_output_path, f"{video_name_no_extension}.mp3")
                 subprocess.run(["ffmpeg", "-i", video_path, "-ar",
-                               "16000", "-ac", "1", audio_output_path])
+                               "16000", "-ac", "1", "-y" ,audio_output_path])
 
-                print(f"Converted {video_name_no_extension}.wav")
+                print(f"Converted {video_name_no_extension}.mp3")
                 return audio_output_path
 
 
