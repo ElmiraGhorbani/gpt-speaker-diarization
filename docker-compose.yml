@@ -5,11 +5,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: client_diarization:v0.5.0
+    image: elmira96/gpt-speaker-diarization:v0.1.0
     hostname: client_diarization
     container_name: client_diarization
     restart: always
     environment:
-      - OPENAI_API_KEY=sk-
-    # ports:
-    #     - 8012:8000
+      - OPENAI_API_KEY=sk-***
+      - NUM_WORKERS=4
+    volumes:
+      - ./resources:/resources:rw
+    ports:
+        - 8012:8000
