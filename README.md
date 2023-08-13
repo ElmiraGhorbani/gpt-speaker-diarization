@@ -5,7 +5,7 @@ This project revolves around leveraging advanced AI language models to perform s
 
 ## Getting started
 
-### Run NoteBook
+### How to Run
 
 #### Installation
 
