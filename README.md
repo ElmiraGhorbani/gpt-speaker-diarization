@@ -50,7 +50,17 @@ NOTE: set your OpenAI API key.  (source in docker-compose).
 docker-compose up -d
 
 ```
+or
 
+```
+docker run -d \
+    --name client_diarization \
+    -e OPENAI_API_KEY=sk-*** \
+    -e NUM_WORKERS=4 \
+    -v $(pwd)/resources:/resources:rw \
+    -p 8012:8000 \
+    elmira96/gpt-speaker-diarization:v0.1.0
+```
 open FastApi swagger, hit try it out.
 
 ```
