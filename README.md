@@ -42,11 +42,8 @@ pip install --force-reinstall https://github.com/yt-dlp/yt-dlp/archive/master.ta
 
 
 
-NOTE: set your OpenAI API key.  (source in ./scripts/app.py or .env.example)
-```
+NOTE: set your OpenAI API key.  (source in docker-compose).
 
-
-```
 
 ```
 
@@ -54,9 +51,10 @@ docker-compose up -d
 
 ```
 
-## Testing
 open FastApi swagger, hit try it out.
 
 ```
-http://0.0.0.0:8000/docs
+http://0.0.0.0:8012/docs
 ```
+## TODO
+[ ] complete notebook
